@@ -6,7 +6,7 @@ func Or(sentences ...*Sentence) *Sentence {
 
 	orTruth := func(sentences ...*Sentence) bool {
 		for _, sent := range sentences {
-			if sent.truthValue() == true {
+			if sent.TruthValue() == true {
 				return true
 			}
 		}
@@ -14,6 +14,6 @@ func Or(sentences ...*Sentence) *Sentence {
 	}
 	return &Sentence{
 		Description: JoinSentences(" V ", sentences...),
-		truthValue:  func() bool { return orTruth(sentences...) },
+		TruthValue:  func() bool { return orTruth(sentences...) },
 	}
 }

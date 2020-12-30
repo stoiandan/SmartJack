@@ -5,7 +5,7 @@ func And(sentences ...*Sentence) *Sentence {
 
 	andTruth := func(sentences ...*Sentence) bool {
 		for _, sent := range sentences {
-			if sent.truthValue() == false {
+			if sent.TruthValue() == false {
 				return false
 			}
 		}
@@ -14,6 +14,6 @@ func And(sentences ...*Sentence) *Sentence {
 
 	return &Sentence{
 		Description: JoinSentences(" ^ ", sentences...),
-		truthValue:  func() bool { return andTruth(sentences...) },
+		TruthValue:  func() bool { return andTruth(sentences...) },
 	}
 }
