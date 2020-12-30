@@ -29,15 +29,15 @@ func Ask(knowledgeBase []*symbol.Sentence,
 	}
 
 	if possible == false {
-		return "This is never possible!"
+		return "false"
 	}
 
 	for _, truth := range ans {
 		if truth == false {
-			return "Can be possible, but not always, can't be sure of it"
+			return "inconcludent! Can be possible, but not always, can't know for sure"
 		}
 	}
-	return "This is true, as in always true!"
+	return "true"
 }
 
 func verifyKB(kb []*symbol.Sentence) bool {
