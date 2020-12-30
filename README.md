@@ -1,6 +1,6 @@
 # SmartJack
 
-SmartJack is a small knowledge-Based System (think Prolog, but dumber). That's able to take a KB and respond to queries with either `true` or `unconcludent`
+SmartJack is a small knowledge-Based System (think Prolog, but dumber). That's able to take a KB and respond to queries with either `true`, `false` or `inconcludent`
 
 
 ## Examples
@@ -22,8 +22,8 @@ Given our two varaibles, what we now want is a K.B. (kwnowledge base) in which w
 Given our KB and our variables, we can know use the engine to query, i.e. ask questions about our world.
 The engine will return one of three answers:
 
-- false  -This means that given what we know (the KB ), we can reason that the answer to the question is false
-- true   - same as above, only this time the answer is true
-- inconcludent - The answer is uncertain, this means there are possible worlds, aka possible states of our varaibles, that don't contradict the KB, for which the answer is true, but not for *all* of them
+- *false* -This means that given what we know (the KB ), we can reason that the answer to the question is false
+- *true* - same as above, only this time the answer is true
+- *inconcludent* - The answer is uncertain, this means there are possible worlds, aka possible states of our varaibles, that don't contradict the KB, for which the answer is true, but not for *all* of them
 
 There is a concrete example in the `main.go` file where the present example is written down in Golang.
