@@ -1,11 +1,11 @@
 package generator
 
 import (
-	"fmt"
 	"math"
 )
 
-func GenerateModel(variables int) <-chan []bool {
+//TruthTableModels generates all 2*n truth table rows (models) for a n variable truth table
+func TruthTableModels(variables int) <-chan []bool {
 	end := int(math.Pow(2, float64(variables)))
 	ch := make(chan []bool, end)
 	defer close(ch)
@@ -16,8 +16,9 @@ func GenerateModel(variables int) <-chan []bool {
 
 func generatorHelper(pos int, model []bool, ch chan []bool) {
 	if pos == len(model) {
-		ch <- model
-		fmt.Printf(" %v \n", model)
+		ans := make([]bool, pos)
+		copy(ans, model)
+		ch <- ans
 		return
 	}
 

@@ -25,3 +25,8 @@ func (s Sentence) String() string {
 func (s *Sentence) ChangeTruth(truth bool) {
 	s.truthValue = func() bool { return truth }
 }
+
+//TruthValue calculates the truth value of a sentence
+func (s Sentence) TruthValue() bool {
+	return s.truthValue()
+}

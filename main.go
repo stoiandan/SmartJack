@@ -2,18 +2,20 @@ package main
 
 import (
 	"fmt"
+	"sentences/query"
 	"sentences/symbol"
 )
 
 func main() {
-	h := symbol.NewSentence("Harry is smart", false)
-	l := symbol.NewSentence("Dumbledor is away", false)
-	p := symbol.NewSentence("Hermione is smart", false)
+	//example of how to use the KB engine
+	d := symbol.NewSentence("Dan is palying at PC", true)
+	a := symbol.NewSentence("Anastasia is playing at PC", true)
 
-	o := symbol.Or(symbol.Or(h, l), p)
-	fmt.Println(o)
+	kb1 := symbol.Or(d, a)
 
-	p.ChangeTruth(true)
-	fmt.Println(o)
+	kb := []*symbol.Sentence{kb1}
+
+	answer := query.Ask(kb, []*symbol.Sentence{d, a}, d)
+	fmt.Println(answer)
 
 }
