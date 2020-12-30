@@ -1,7 +1,7 @@
 package symbol
 
-//Or is the logical OR operator binding multiple sentneces and returning a new sentence represeting the input
-// connected with OR
+//Or is the logical OR operator binding multiple sentences and returning a new sentence 
+// represeting the input connected with OR
 func Or(sentences ...*Sentence) *Sentence {
 
 	orTruth := func(sentences ...*Sentence) bool {
