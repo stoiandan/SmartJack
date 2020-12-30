@@ -1,6 +1,6 @@
 # SmartJack
 
-SmartJack is a small knowledge-Based System (think Prolog, but dumber). That's able to take a KB and respond to queries with either `true`, `false` or `inconcludent`
+SmartJack is a small Knowledge-Based System (think Prolog, but dumber). That's able to take a KB and respond to queries with either `true`, `false` or `inconcludent`
 
 
 ## Examples
