@@ -9,7 +9,7 @@ For example let's see the engine in action by creating a world with two variable
 
 ```
   let d = "Dan is playing at the PC"
-  let a = "Anatasia is playing a the"
+  let a = "Anatasia is playing at the PC"
 ```
 
 Given our two varaibles, what we now want is a K.B. (kwnowledge base) in which we have *facts*, i.e. true and false sentences about our world:
