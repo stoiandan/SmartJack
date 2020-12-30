@@ -24,6 +24,9 @@ The engine will return one of three answers:
 
 - *false* -This means that given what we know (the KB ), we can reason that the answer to the question is false
 - *true* - same as above, only this time the answer is true
-- *inconcludent* - The answer is uncertain, this means there are possible worlds, aka possible states of our varaibles, that don't contradict the KB, for which the answer is true, but not for *all* of them
+- *inconcludent* - The answer is uncertain, this means there are possible worlds, aka possible states of our varaibles, that don't contradict the KB, for which the answer is true, but not for *all* of them.
+
+For example, we could ask `is Dan at the PC?`, this question is `inconcludent`, it could be `true` and not contradict our KB, but the opposite is also true.
+Because our KB reads `either Dan or Anatasia are at the PC, playing games`.
 
 There is a concrete example in the `main.go` file where the present example is written down in Golang.
